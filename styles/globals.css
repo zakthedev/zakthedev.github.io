@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  width: 100%;
+  font-family: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  @apply dark:bg-dark bg-white  transition-colors duration-500;
+  line-height: 1.8rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply dark:text-white text-black font-bold  transition-colors duration-500;
+}
+
+h1 {
+  @apply text-xl;
+}
+
+h2 {
+  @apply text-lg;
+}
+
+h3 {
+  @apply text-base;
+}
+a {
+  @apply text-lightText transition-colors duration-500;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  @apply dark:bg-dark bg-white  transition-colors duration-500;
+}
+
+.landingSectionTitle::before {
+  content: "";
+  position: absolute;
+  left: 110%;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 1px;
+  width: 100vw;
+  @apply bg-lightText;
+}
+
+.about__name {
+  font-weight: 800;
+  outline: none;
+  color: #ff3c38;
+  text-transform: uppercase;
+  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-1&color=222222);
+  background-size: 100% 100%;
+  margin: -2px -6px;
+  padding: 4px 6px;
+}
+
+.colorful {
+  outline: none;
+  text-transform: uppercase;
+  background: linear-gradient(
+    135deg,
+    #5335cf 0%,
+    #de005e 25%,
+    #f66e48 50%,
+    #de005e 75%,
+    #5335cf 100%
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-colorful 15s linear infinite;
+}
+@keyframes animate-colorful {
+  to {
+    background-position: 400%;
+  }
+}
+
+/* for Firefox */
+.carousel {
+  scrollbar-width: initial;
+}
+/* for Chrome, Safari, Edge, etc */
+.carousel::-webkit-scrollbar {
+  @apply block h-2 rounded-full;
+}
+.carousel::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-base-content/60;
+}
